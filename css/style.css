@@ -127,7 +127,15 @@ nav li{
 	border: 2px solid black;
 }
 
-
+/**************************** insert ****************************/
+#insert{
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 60px;
+}
+.paragraph_big{
+	font-size: 1.30em;
+}
 
 
 

@@ -1,21 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>insert Question</title>
-</head>
-<body>
-<form method="post" action="insert.php">
-	Question:<p><input type="text" name="question"></p>
-	Correct Answer: <p><input type="text" name="cor_answer"></p>
+<?php // Script 8.4 - index.php
+/* This is the home page for this site. 
+It uses templates to create the layout. */
+ini_set('display_errors', 1);
 
-	Answer1 : <p><input type="text" name="answer1"></p>
-	Answer2 : <p><input type="text" name="answer2"></p>
+error_reporting(E_ALL);
+
+
+//edw tha valw kai ta difine gia na einai kai stin arxi
+define('TITLE', 'Isert in Quiz');
+define('H1', 'Quiz for Hire' ) ;
+define('href', '2.php');
+// Include the header:
+include('templates/header.html');
+// Leave the PHP section to display lots of HTML:
+//edw vazw to session gia na kratisw to log in
+			
+?>
+<form id="insert" method="post" action="insert.php">
+	<h1 >Question:</h1> 
+	<p><input type="text" name="question" placeholder="insert the question"></p>
+	<p class="paragraph_big">Correct Answer:</p> 
+	<p ><input type="text" name="cor_answer" placeholder="the coreect answer"></p>
+	<p class="paragraph_big">Answer1 :</p> 
+	<p><input type="text" name="answer1" placeholder="answer1"></p>
+	<p class="paragraph_big">Answer2 : </p>
+	<p><input type="text" name="answer2" placeholder="answer2"></p>
 	
 	<input type="submit" name="submit">
-	
-</form>
-</body>
-</html>
+
+
+<?php
+
+include('templates/footer.html'); // Need the footer.
+
+?>
+
 
 
 
