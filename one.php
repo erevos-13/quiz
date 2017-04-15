@@ -12,11 +12,11 @@ include('templates/header.html');
 
 ?>
 
-
+<div style="padding: 20px 20px;">
 <h2><?php print "<p> Welcome to My site <b><i><sup>". $_SESSION['name'] ."</sup></i></b></p>"; ?></h2>
 <p>You've successfully logged in.</p>
 <p>And you can see what i make for you to select me for hire.</p>
 
-
+</div>
 
 <?php include('templates/footer.html'); // Need the footer. ?>

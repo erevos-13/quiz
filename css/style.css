@@ -7,19 +7,22 @@
 /******************* base *******************/
 body{
 	height: 100%;
-	background-color: #888C8C;
+	background-color: white;
 }
 
 
 a{
 	text-decoration: none;
 	color: white;
+	padding: 10px 5px;
 	
 }
 
-h2{
-	text-align: center;
+a:hover{
+	color: black;
 }
+
+
 
 h1{
 	text-align: center;
@@ -31,6 +34,7 @@ h1{
 .header{
 	background-color: rgb(50, 62, 60);
 	margin:0;
+	padding: 30px 60px;
 }
 .headerlogin{
 	
@@ -47,25 +51,29 @@ h1{
 
 
 .logo{
+	background-color: #87CEEB;
+	border-bottom: 3px solid gray;
 	font-family: ' Pacifico', sans-serif;
 	text-align: center;
 	color: black;
-	padding: 10px 40px;
+	padding: 60px 40px;
 	margin: 0;
 	
 }
 
 .logo h1{
 	float: left;
+	margin-top: -30px;
 }
 .logo nav{
 	float: right;
+	margin-top: -30px;
 }
 
 .form{
 	color: white;
 	background-color: rgb(50, 62, 60);
-	font-family: 'Josefin Sans';
+	
 	font-size: 1.40em;
 	text-align: center;
 	padding: 20px 30px;
@@ -135,6 +143,7 @@ nav li{
 }
 .paragraph_big{
 	font-size: 1.30em;
+	text-align: center;
 }
 
 

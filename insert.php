@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 
 
 //edw tha valw kai ta difine gia na einai kai stin arxi
-define('TITLE', 'Isert in Quiz');
+define('TITLE', 'Insert in Quiz');
 define('H1', 'Quiz for Hire' ) ;
 define('href', '2.php');
 // Include the header:
@@ -29,11 +29,7 @@ include('templates/header.html');
 	<input type="submit" name="submit">
 
 
-<?php
 
-include('templates/footer.html'); // Need the footer.
-
-?>
 
 
 
@@ -71,7 +67,7 @@ ini_set('display_errors', 1);
 		  '$_POST[answer1]',
 		   '$_POST[answer2]')";
 
-		   echo "you add one question";
+		   echo "<p class='paragraph_big'>You add one question<p>";
 		mysqli_query($dbc,$query);
             
            
@@ -80,6 +76,12 @@ ini_set('display_errors', 1);
 
 
 
+
+?>
+
+<?php
+
+include('templates/footer.html'); // Need the footer.
 
 ?>
 
