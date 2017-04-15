@@ -24,7 +24,7 @@ include('templates/header.html');
 	<?php
 	//edw tha valw to connect me tin database 
 
-            $dbc = mysqli_connect('localhost', 'root', 'erevos13');
+	            $dbc = mysqli_connect('localhost', 'root', 'erevos13');
 
             if(!$dbc)
             {
@@ -39,7 +39,8 @@ include('templates/header.html');
 		$mydata = mysqli_query($dbc,$query);
 		
 
-	
+		
+
 
 	
 
@@ -48,14 +49,28 @@ include('templates/header.html');
 			
 			while($record = mysqli_fetch_array($mydata))
 
-            {	
+            {	           	
             	
-            	echo "<p>The question is:<br>".$record["question"]."</p>";
-				echo '<p><input type="radio" name="cor_answer" value='.$record['cor_answer'].">".$record['cor_answer']."</p>";
-				echo '<p><input type="radio" name="answer1" value='.$record['answer1'].">".$record['answer1']."</p>";
-				echo '<p><input type="radio" name="answer2" value='.$record['answer2'].">".$record['answer2']."</p>"; 
+            	//edw thelw na kanw echo tis apantisis
+            	
+            		echo "<p>The question is:<br>".$record["question"]."</p>";
+            	
+				$answer1 ='<p><input type="radio" name="cor_answer" value='.$record['cor_answer'].">".$record['cor_answer']."</p>";
+				$answer2 = '<p><input type="radio" name="answer1" value='.$record['answer1'].">".$record['answer1']."</p>";
+				$answer3 = '<p><input type="radio" name="answer2" value='.$record['answer2'].">".$record['answer2']."</p>"; 
+				
+				//edw thelw na vgalw tixea ta echo
 
-            }
+				$answer = array($answer1 ,$answer2 ,$answer3);
+				shuffle($answer);
+				foreach ($answer as $answer) {
+					echo $answer;
+				}
+
+
+
+
+			}
             echo '<p><input type="submit" name="submit"></p>';
 	echo "</form>";
 		
@@ -73,7 +88,8 @@ include('templates/header.html');
 if (isset($_POST['submit'])) {
 
 	
-	if (isset($_POST['cor_answer']))  {		
+	if (isset($_POST['cor_answer']))  {	
+			
 		print("You have select the correct answer");		
 	}elseif(isset($_POST['answer1'])){
 		echo "you select the wrong answer try again!!!";
@@ -81,6 +97,8 @@ if (isset($_POST['submit'])) {
 		echo "you select the wrong answer  try again!!";
 	}
 	
+
+
 
 
 
