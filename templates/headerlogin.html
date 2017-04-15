@@ -1,0 +1,49 @@
+<?php // edw apla katharizw ta input
+
+// Turn on output buffering:
+ob_start();
+
+?>
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="True">
+  <title>  
+  <?php // Print the page title.
+  if (defined('TITLE')) { // Is the title defined?
+    print TITLE;
+  } else { // The title is not defined.
+    print 'empty';
+  }
+  ?></title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet"> 
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header class="headerlogin" >
+  <div >
+    <h1 >
+    <a href="index.php">
+      <?php
+      if (defined('H1')) {
+        print H1;
+      }
+      else{
+        print "Oups";
+      }
+
+          ?>
+    </a></h1>
+
+  </div>
+</header>
+
+  <main class="main">
+  <!-- BEGIN CHANGEABLE CONTENT. -->
+		<!-- Script 8.2 - header.html -->

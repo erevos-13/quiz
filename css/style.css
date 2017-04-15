@@ -1,0 +1,138 @@
+/* 
+    font-family: 'Josefin Sans', sans-serif;
+
+    font-family: 'Pacifico', cursive;
+
+ */
+/******************* base *******************/
+body{
+	height: 100%;
+	background-color: #888C8C;
+}
+
+
+a{
+	text-decoration: none;
+	color: white;
+	
+}
+
+h2{
+	text-align: center;
+}
+
+h1{
+	text-align: center;
+}
+/**************** header  ****************/
+
+
+
+.header{
+	background-color: rgb(50, 62, 60);
+	margin:0;
+}
+.headerlogin{
+	
+	padding: 30px 10px;
+	margin: 0;
+}
+
+.headerlogin h1{
+	
+	font-size: 2.60em;
+	text-align: center;
+	margin-top: 10px;
+}
+
+
+.logo{
+	font-family: ' Pacifico', sans-serif;
+	text-align: center;
+	color: black;
+	padding: 10px 40px;
+	margin: 0;
+	
+}
+
+.logo h1{
+	float: left;
+}
+.logo nav{
+	float: right;
+}
+
+.form{
+	color: white;
+	background-color: rgb(50, 62, 60);
+	font-family: 'Josefin Sans';
+	font-size: 1.40em;
+	text-align: center;
+	padding: 20px 30px;
+	margin:05% 30% 05% 30%;
+	border-radius: 10%;
+	background-image: url("../img/quiz.jpg");
+	
+}
+
+.quiz{
+	margin-top: 126px;
+	text-align: center;
+}
+
+
+
+
+.Welcome{
+	margin: 0;
+	padding: 10px 10px;
+	text-align: center;
+	float: left; 
+}
+
+/********************* navigation  *********************/
+
+nav{
+	text-align: center;
+
+
+}
+
+nav ul{
+	text-align: center;
+	margin:0;
+	padding: 10px 0;
+}
+nav li{
+	display: inline-block;
+}
+
+/******************** main  ********************/
+
+
+.insite{
+	text-align: center;
+}
+.egw{
+	text-align: center;
+}
+.egw img{
+	padding: 30px 30px;
+
+
+}
+
+.button:hover{
+	background-color: white;
+	border: 2px solid black;
+}
+
+
+
+
+
+/****************** footer ******************/
+
+footer{
+	text-align: center;
+}

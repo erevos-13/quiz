@@ -1,0 +1,25 @@
+		<!-- Script 8.3 - footer.html -->
+  <!-- END CHANGEABLE CONTENT. -->
+  </main>
+
+  <footer >
+	<div  class="footer">
+    <p>Design by <a   href="img/logo.png" > <img src="img/logo.png" style="width: 50px;height: 30px;" ></img></a><br/>
+
+    <?php // Print the current date and time...
+	// Set the timezone:
+	date_default_timezone_set('Europe/Athens');
+
+	// Now print the date and time:
+	print date('l F j - H:i ');
+	?></p>
+	</div>
+  </footer>
+    
+</body>
+</html>
+<?php // Script 8.12 - footer.html #3
+
+// Send the buffer to the browser and turn off buffering:
+ob_end_flush();
+?>
