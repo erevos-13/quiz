@@ -53,7 +53,7 @@ include('templates/header.html');
             	
             	//edw thelw na kanw echo tis apantisis
             	
-            		echo "<p>The question is:<br>".$record["question"]."</p>";
+            		echo "<h3>The question is:<br><i>".$record["question"]."</i></h3>";
             	
 				$answer1 ='<p><input type="radio" name="cor_answer" value='.$record['cor_answer'].">".$record['cor_answer']."</p>";
 				$answer2 = '<p><input type="radio" name="answer1" value='.$record['answer1'].">".$record['answer1']."</p>";
@@ -90,11 +90,11 @@ if (isset($_POST['submit'])) {
 	
 	if (isset($_POST['cor_answer']))  {	
 			
-		print("You have select the correct answer");		
+		print("<p class='paragraph_big' ><b>You have select the correct answer</b></p>");		
 	}elseif(isset($_POST['answer1'])){
 		echo "you select the wrong answer try again!!!";
 	}elseif (isset($_POST['answer2'])) {
-		echo "you select the wrong answer  try again!!";
+		echo "<p class='paragraph_big' ><b>you select the wrong answer  try again!!</b></p>";
 	}
 	
 

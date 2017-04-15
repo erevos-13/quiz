@@ -8,6 +8,7 @@
 body{
 	height: 100%;
 	background-color: white;
+
 }
 
 
@@ -32,6 +33,7 @@ h1{
 
 
 .header{
+	font-family:  'Lato', sans-serif;
 	background-color: rgb(50, 62, 60);
 	margin:0;
 	padding: 30px 60px;
@@ -43,7 +45,7 @@ h1{
 }
 
 .headerlogin h1{
-	
+	font-family:  'Lato', sans-serif;
 	font-size: 2.60em;
 	text-align: center;
 	margin-top: 10px;
@@ -53,7 +55,7 @@ h1{
 .logo{
 	background-color: #87CEEB;
 	border-bottom: 3px solid gray;
-	font-family: ' Pacifico', sans-serif;
+	font-family: ' Lato', sans-serif;
 	text-align: center;
 	color: black;
 	padding: 60px 40px;
@@ -83,9 +85,11 @@ h1{
 	
 }
 
-.quiz{
+.quiz form{
 	margin-top: 126px;
 	text-align: center;
+	font-family: 'Oswald', sans-serif; 
+	font-size: 1.10em;
 }
 
 
