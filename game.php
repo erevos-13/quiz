@@ -83,11 +83,11 @@ if (isset($_POST['submit'])) {
 	
 	if (isset($_POST['cor_answer']))  {	
 			
-		print("<p class='paragraph_big' ><b>You have select the correct answer</b></p>");		
+		print("<p id='correct_answer' class='paragraph_big' ></p>");		
 	}elseif(isset($_POST['answer1'])){
 		echo "you select the wrong answer try again!!!";
 	}elseif (isset($_POST['answer2'])) {
-		echo "<p class='paragraph_big' ><b>you select the wrong answer  try again!!</b></p>";
+		echo "<p id='wrong_answer' class='paragraph_big' ><b>you select the wrong answer  try again!!</b></p>";
 	}
 	
 
@@ -98,6 +98,8 @@ if (isset($_POST['submit'])) {
 }
 
 ?>
+
+
 </form>
 </div>
 
