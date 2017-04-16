@@ -59,7 +59,7 @@ include('templates/header.html');
 				$answer2 = '<p><input type="radio" name="answer1" value='.$record['answer1'].">".$record['answer1']."</p>";
 				$answer3 = '<p><input type="radio" name="answer2" value='.$record['answer2'].">".$record['answer2']."</p>"; 
 				
-				//edw thelw na vgalw tixea ta echo
+				//here i make the random swich of the answers
 
 				$answer = array($answer1 ,$answer2 ,$answer3);
 				shuffle($answer);
