@@ -43,17 +43,7 @@ ini_set('display_errors', 1);
             
             
             
-            $dbc = mysqli_connect('localhost', 'root', 'erevos13');
-
-            if(!$dbc)
-            {
-                die("den anoigi" . mysqli_error());
-            }
-		
-
-
-		mysqli_select_db($dbc,"quiz");
-		mysqli_set_charset($dbc,'UTF-8' );
+           include('connect/mysqli_connect.php');
 
 		$query = "INSERT INTO question ( id,
 		 question,
