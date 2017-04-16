@@ -53,7 +53,7 @@ include('templates/header.html');
             	
             	//edw thelw na kanw echo tis apantisis
             	
-            		echo "<h3>The question is:<br><i>".$record["question"]."</i></h3>";
+            		echo "<h4>The question is:</h4><br><h1<i>".$record["question"]."</h1></i>";
             	
 				$answer1 ='<p><input type="radio" name="cor_answer" value='.$record['cor_answer'].">".$record['cor_answer']."</p>";
 				$answer2 = '<p><input type="radio" name="answer1" value='.$record['answer1'].">".$record['answer1']."</p>";
