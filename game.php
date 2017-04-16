@@ -24,14 +24,7 @@ include('templates/header.html');
 	<?php
 	//edw tha valw to connect me tin database 
 
-	            $dbc = mysqli_connect('localhost', 'root', 'erevos13');
-
-            if(!$dbc)
-            {
-                die("den anoigi" . mysqli_error());
-            }
-		mysqli_select_db($dbc,"quiz");
-		mysqli_set_charset($dbc,'UTF-8' );
+	           include('connect/mysqli_connect.php');
 		
 
 		$query = "SELECT * FROM question WHERE RAND() LIMIT 1  ";
