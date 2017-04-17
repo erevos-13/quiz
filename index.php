@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		include('connect/mysqli_connect.php');
 
 		//select from my database the email and name
-		$query = "SELECT email , password, name FROM users ";
+		$query = "SELECT email , pass, userName FROM users ";
 		
 		//run the query 
 		$r = mysqli_query($dbc, $query);
@@ -31,15 +31,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Retrieve and print every record of mail and password for comparison
 	while ($row = mysqli_fetch_array($r)){
 		
-		if ( (strtolower($_POST['email']) == $row['email']) && ($_POST['password'] == $row['password']) ) { 
+		if ( (strtolower($_POST['email']) == $row['email']) && ($_POST['pass'] == $row['pass']) ) { 
 		// Correct!	
 			//tha kalesw kai to onoma edw apo to mail
 
 			session_start();
 			$_SESSION['time'] = date('g:i a l F j');
-			$_SESSION['name'] = $row['name'];
-			
-			header("Location: http://orfeasvou.com/cv_site/one.php");
+			$_SESSION['name'] = $row['userName'];
+			//here send the location were i like to go after log in
+			header("Location: localhost/git/quiz/one.php");
 			ob_end_flush();
 			exit();
 

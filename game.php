@@ -85,9 +85,9 @@ if (isset($_POST['submit'])) {
 			
 		print("<p id='correct_answer' class='paragraph_big' ></p>");		
 	}elseif(isset($_POST['answer1'])){
-		echo "you select the wrong answer try again!!!";
+		print("<p id='wrong_answer' class='paragraph_big' ></p>");
 	}elseif (isset($_POST['answer2'])) {
-		echo "<p id='wrong_answer' class='paragraph_big' ><b>you select the wrong answer  try again!!</b></p>";
+		print("<p id='wrong_answer' class='paragraph_big' ></p>");
 	}
 	
 

@@ -7,9 +7,7 @@ define('H1', 'Register here');
 
 include('templates/headerlogin.html');
 
-// Print some introductory text:
-print '<h2>Registration Form</h2>
-	<p>Register so that you can take advantage of certain features like this, that, and the other thing.</p>';
+
 	
 // Check if the form has been submitted:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -52,9 +50,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$emaildb = mysqli_real_escape_string($dbc, trim(strip_tags($_POST['email'])));
 		$password = mysqli_real_escape_string($dbc, trim(strip_tags($_POST['password1'])));
 	 	
+			/*  +----------+-------------+------+-----+---------+----------------+
+				| Field    | Type        | Null | Key | Default | Extra          |
+				+----------+-------------+------+-----+---------+----------------+
+				| userID   | int(9)      | NO   | PRI | NULL    | auto_increment |
+				| fullname | varchar(50) | NO   |     | NULL    |                |
+				| userName | varchar(40) | NO   |     | NULL    |                |
+				| email    | varchar(40) | NO   |     | NULL    |                |
+				| pass     | varchar(40) | NO   |     | NULL    |                |
+				+----------+-------------+------+-----+---------+----------------+
 
-		$query = "INSERT INTO users ( id, email, password, name, lastname , time_in ) VALUES  
-		( Null,'$emaildb', '$password', '$name', '$lastName', NOW())";
+			*/
+		$query = "INSERT INTO users ( userID, email, pass, userName, fullname ) VALUES  
+		( Null,'$emaildb', '$password', '$name', '$lastName' )";
 
 		//mia if gia to an katafera na grafto
 				// Execute the query:
@@ -64,10 +72,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$_SESSION['emailLogin'] = $name;
 			$_SESSION['time'] = date('g:i a l F j');
 			$_SESSION['name'] = $_POST['first_name'];
-			mail($emaildb, 'Register in My cv', 'Thank you that found a little time to see my CV');
-			mail('erevos13@gmail.com', 'CV', $emaildb. ' is lookin my site');
+			mail($emaildb, 'Register in My cv', 'Thank you that found a little time to see my quiz game');
+			mail('erevos@orfeasvou.com', 'CV', $emaildb. ' is lookin my site');
 			ob_end_clean();
-			header("Location: http://orfeasvou.com/cv_site/one.php");
+			//here i have to make the site i wold like to go
+			header("Location: one.php");
 			exit();
 			
 
@@ -89,7 +98,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // Create the form:
 ?>
-<form action="register.php" method="post" class="form--inline">
+<form action="register.php" method="post" class="register">
+
+	<h2>Registration Form</h2>
+	<p>Register so that you can take advantage of certain features like this, that, and the other thing.</p>
 
 	<p><label for="first_name">First Name:</label><input type="text" name="first_name" size="20" value="
 	<?php if (isset($_POST['first_name'])) { print htmlspecialchars($_POST['first_name']); } ?>"></p>
@@ -101,9 +113,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<p><label for="password1">Password:</label><input type="password" name="password1" size="20" value="<?php if (isset($_POST['password1'])) { print htmlspecialchars($_POST['password1']); } ?>"></p>
 	<p><label for="password2">Confirm Password:</label><input type="password" name="password2" size="20" value="<?php if (isset($_POST['password2'])) { print htmlspecialchars($_POST['password2']); } ?>"></p>
 
-	<p><input type="submit" name="submit" value="Register!" class="button--pill"></p>
-
+	<p><input type="submit" name="submit" value="Register!"></p>
+	
 </form>
-<p><a href="index.php"><button class="button--pill" >Login</button></a></p>
+<p class="register"><a href="index.php"><button>Login</button></a></p>
 
 <?php include('templates/footer.html'); // Need the footer. ?>

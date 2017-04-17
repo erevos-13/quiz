@@ -8,6 +8,7 @@
 body{
 	height: 100%;
 	background-color: white;
+	
 
 }
 
@@ -88,8 +89,8 @@ h1{
 .quiz form{
 	margin-top: 126px;
 	text-align: center;
-	font-family: 'Oswald', sans-serif; 
-	font-size: 1.10em;
+	font-family: 'Lato', sans-serif; 
+	font-size: 1.30em;
 }
 
 
@@ -152,6 +153,20 @@ nav li{
 
 }
 
+/****************************** register ******************************/
+
+.register{
+	text-align: center;
+}
+
+/*********************************** one ***********************************/
+
+.one{
+	padding: 30px 20px;
+	font-size: 1.30em;
+	font-family: 'Lato';
+
+}
 
 
 /****************** footer ******************/

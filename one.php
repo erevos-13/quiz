@@ -12,10 +12,12 @@ include('templates/header.html');
 
 ?>
 
-<div style="padding: 20px 20px;">
+<div class="one">
 <h2><?php print "<p> Welcome to My site <b><i><sup>". $_SESSION['name'] ."</sup></i></b></p>"; ?></h2>
 <p>You've successfully logged in.</p>
-<p>And you can see what i make for you to select me for hire.</p>
+<p>And you can see what i make for you to select me for hire.<br> It is a simple Quiz game where i made with Php and Mysql. <br> You can click the button <b>Insert Question</b> to insert a question of your own. <br> Or you can click the button <b>Game</b> to start play the game i make.</p>
+<a href="insert.php"><button>Insert Question</button></a>
+<a href="game.php"><button>Game</button></a>
 
 </div>
 
